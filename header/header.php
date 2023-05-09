@@ -3,16 +3,16 @@ session_start();
 $user_id = $_SESSION['id'];
 $status = $_SESSION['role'];
 ?>
-<header id="header" class="header fixed-top d-flex align-items-center">
+<header id="header" class="header fixed-top d-flex align-items-center" style='background-color: #1e5288'>
 
     <div class="d-flex align-items-center justify-content-between">
       <a href="#" class="logo d-flex align-items-center">
         <img src="../cv/images/logo/icon.png" alt="">
-        <span class="d-none d-lg-block">GOCS-<?php if($status == '1') {
+        <span class="d-none d-lg-block" style="color: white">GOCS-<?php if($status == '1') {
           echo 'ADMIN';
         }?></span>
       </a>
-      <i class="bi bi-list toggle-sidebar-btn"></i>
+      <i class="bi bi-list toggle-sidebar-btn" style="color: white"></i>
     </div><!-- End Logo -->
 
 
@@ -22,8 +22,8 @@ $status = $_SESSION['role'];
         <li class="nav-item dropdown pe-3">
 
           <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-            <img src="../assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
-            <span class="d-none d-md-block dropdown-toggle ps-2"><?php if($status == '1') {
+            <!-- <img src="../../assets/img/profile-img.jpg" alt="Profile" class="rounded-circle"> -->
+            <span class="d-none d-md-block dropdown-toggle ps-2" style="color: white"><?php if($status == '1') {
           echo 'ADMIN';
         }?></span>
           </a><!-- End Profile Iamge Icon -->
