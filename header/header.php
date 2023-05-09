@@ -2,14 +2,15 @@
 session_start();
 $user_id = $_SESSION['id'];
 $status = $_SESSION['role'];
-$username = $_SESSION['name'];
 ?>
 <header id="header" class="header fixed-top d-flex align-items-center">
 
     <div class="d-flex align-items-center justify-content-between">
       <a href="#" class="logo d-flex align-items-center">
         <img src="../cv/images/logo/icon.png" alt="">
-        <span class="d-none d-lg-block">TANZANIA MUSLIM WOMEN</span>
+        <span class="d-none d-lg-block">GOCS-<?php if($status == '1') {
+          echo 'ADMIN';
+        }?></span>
       </a>
       <i class="bi bi-list toggle-sidebar-btn"></i>
     </div><!-- End Logo -->

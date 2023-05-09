@@ -12,7 +12,7 @@ if (isset($_POST['submit'])) {
     $_SESSION['user_id'] = $count['id'];
     $_SESSION['role'] = $count['role'];
   if ($count['role'] == '1') {
-      header("location: home/");
+      header("location: modules/admin/");
   }
 } else {
   echo 'Wrong email/ password';
