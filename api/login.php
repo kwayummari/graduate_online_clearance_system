@@ -12,12 +12,10 @@ if (isset($_POST['submit'])) {
     $_SESSION['user_id'] = $count['id'];
     $_SESSION['role'] = $count['role'];
   if ($count['role'] == '1') {
-    //   header("location: home/");
-    echo 'admin';
+      header("location: home/");
   }
 } else {
   echo 'Wrong email/ password';
 }
-
 }
  ?>
