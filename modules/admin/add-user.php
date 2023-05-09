@@ -12,7 +12,7 @@ include '../../api/dashboard.php';
       <div class="row">
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">User Input<span style="color: green; margin-left: 6cm;"><b><?php include('adds.php'); ?></b></span> </h5>
+              <h5 class="card-title">User Input<span style="color: green; margin-left: 6cm;"><b><?php include('submit-user.php'); ?></b></span> </h5>
               <form method="POST">
                 <div class="row mb-3">
                   <label for="inputText" class="col-sm-2 col-form-label">First Name</label>

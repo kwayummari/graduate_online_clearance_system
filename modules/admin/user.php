@@ -22,7 +22,7 @@ include '../../api/dashboard.php';
             <div class="col-12">
               <div class="card recent-sales overflow-auto">
                 <div class="card-body">
-                  <h5 class="card-title">System Users <span>| Today</span> <a href="add.php"><span class="badge bg-success text-white">+ Add User</span></a></h5>
+                  <h5 class="card-title">System Users <span>| Today</span> <a href="add-user.php"><span class="badge bg-success text-white">+ Add User</span></a></h5>
                   <table class="table table-borderless datatable">
                     <thead>
                       <tr>
