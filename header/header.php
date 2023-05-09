@@ -23,13 +23,16 @@ $status = $_SESSION['role'];
 
           <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
             <img src="../assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
-            <span class="d-none d-md-block dropdown-toggle ps-2"><?php echo $username;?></span>
+            <span class="d-none d-md-block dropdown-toggle ps-2"><?php if($status == '1') {
+          echo 'ADMIN';
+        }?></span>
           </a><!-- End Profile Iamge Icon -->
 
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
             <li class="dropdown-header">
-              <h6><?php echo $username;?></h6>
-              <span><?php echo $status;?></span>
+              <span><?php if($status == '1') {
+          echo 'ADMIN';
+        }?></span>
             </li>
             <li>
               <hr class="dropdown-divider">
@@ -45,7 +48,7 @@ $status = $_SESSION['role'];
             </li>
 
             <li>
-              <a class="dropdown-item d-flex align-items-center" href="login/logout.php">
+              <a class="dropdown-item d-flex align-items-center" href="../../login/logout.php">
                 <i class="bi bi-box-arrow-right"></i>
                 <span>Sign Out</span>
               </a>
