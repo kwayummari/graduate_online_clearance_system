@@ -5,7 +5,7 @@
 
 <body>
 
-  <main>
+  <main style='background-color: #1e5288'>
     <div class="container">
 
       <section class="section register min-vh-100 d-flex flex-column align-items-center justify-content-center py-4">
@@ -16,7 +16,7 @@
               <div class="d-flex justify-content-center py-4">
                 <a href="index.php" class="logo d-flex align-items-center w-auto">
                   <!-- <img src="cv/images/logo/icon.png" alt="">  -->
-                  <span class="d-none d-lg-block align-text-center">ADMIN PANEL</span>
+                  <span class="d-none d-lg-block align-text-center" style="color: white">GOCS PANEL</span>
                 </a>
               </div><!-- End Logo -->
 
@@ -29,7 +29,7 @@
                     <p class="text-center small">Enter your username & password to login</p>
                   </div>
                   
-                  <h5 class="card-title"><span style="color: red;"><b><?php include('login/index.php'); ?></b></span> </h5>
+                  <h5 class="card-title"><span style="color: red;"><b><?php include('api/login.php'); ?></b></span> </h5>
 
               <!-- General Form Elements -->
                   <form method="POST" class="row g-3 needs-validation" target="_top" autocomplete="on"   enctype="multipart/form-data" novalidate>
@@ -39,8 +39,8 @@
                       <label for="yourUsername" class="form-label">Email</label>
                       <div class="input-group has-validation">
                         <span class="input-group-text" id="inputGroupPrepend">@</span>
-                        <input type="text" name="email" class="form-control" id="yourUsername" required>
-                        <div class="invalid-feedback">Please enter your username.</div>
+                        <input type="email" name="email" class="form-control" id="yourUsername" required>
+                        <div class="invalid-feedback">Please enter your valid email.</div>
                       </div>
                     </div>
 
@@ -57,7 +57,7 @@
                       </div>
                     </div>
                     <div class="col-12">
-                      <button class="btn btn-primary w-100" name="submit" type="submit">Login</button>
+                      <button class="btn btn-primary w-100" style='background-color: #1e5288' name="submit" type="submit">Login</button>
                     </div>
                     <div class="col-12">
                       <!--<p class="small mb-0">Don't have account? <a href="register.html">Create an account</a></p>-->
@@ -67,8 +67,8 @@
                 </div>
               </div>
 
-              <div class="credits">
-                Designed and Maintained by <a href="serengetibytes.co.tz">SERENGETI BYTES</a>
+              <div class="credits" style = "color: white">
+                Designed and Maintained by <a href="#" style = "color: red">Mariam Ahmad</a>
               </div>
 
             </div>
