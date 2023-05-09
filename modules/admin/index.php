@@ -1,15 +1,15 @@
 <?php
 include '../../connection/index.php';
 
-//   $query="select * from blog";
-//   $result=mysqli_query($connect,$query);
-//   $count=mysqli_fetch_assoc($result);
-//   $total_blogs = mysqli_num_rows($result);
+  $query="select * from user where role = '1'";
+  $result=mysqli_query($connect,$query);
+  $count=mysqli_fetch_assoc($result);
+  $total_admin = mysqli_num_rows($result);
 
-//   $query="select * from carousel";
-//   $result1=mysqli_query($connect,$query);
-//   $count1=mysqli_fetch_assoc($result1);
-//   $total_carousel = mysqli_num_rows($result1);
+  $query="select * from user where role = '2'";
+  $result1=mysqli_query($connect,$query);
+  $count1=mysqli_fetch_assoc($result1);
+  $total_student = mysqli_num_rows($result1);
 
   $query="select * from user";
   $result4=mysqli_query($connect,$query);
@@ -79,14 +79,14 @@ include '../../connection/index.php';
               <div class="card info-card revenue-card">
 
                 <div class="card-body">
-                  <h5 class="card-title">Total <span>| Blog Posts</span></h5>
+                  <h5 class="card-title">Total <span>| Admins</span></h5>
 
                   <div class="d-flex align-items-center">
                     <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
                       <i class="bi bi-house-fill"></i>
                     </div>
                     <div class="ps-3">
-                      <h6><?php echo $total_users ?></h6>
+                      <h6><?php echo $total_admin ?></h6>
                       <!-- <span class="text-success small pt-1 fw-bold">8%</span> <span class="text-muted small pt-2 ps-1">increase</span> -->
 
                     </div>
@@ -102,14 +102,14 @@ include '../../connection/index.php';
               <div class="card info-card customers-card">
 
                 <div class="card-body">
-                  <h5 class="card-title">Total <span>| Carousel Posts</span></h5>
+                  <h5 class="card-title">Total <span>| Students</span></h5>
 
                   <div class="d-flex align-items-center">
                     <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
                       <i class="bi bi-person-bounding-box"></i>
                     </div>
                     <div class="ps-3">
-                      <h6><?php echo $total_users ?></h6>
+                      <h6><?php echo $total_student ?></h6>
                       <!-- <span class="text-danger small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">decrease</span> -->
 
                     </div>
