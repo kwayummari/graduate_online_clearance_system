@@ -42,7 +42,11 @@ include '../../api/dashboard.php';
                         <th scope="row"><a href="#"><?php echo $rows4['id'];?></a></th>
                         <td><?php echo $rows4['email'];?></td>
                         <td><a href="#" class="text-primary"><?php echo $rows4['fullname'];?></a></td>
-                        <td><span class="badge bg-success"><?php echo $rows4['role'];?></span></td>
+                        <td><span class="badge bg-success"><?php if($rows4['role'] == '1') {
+                          echo 'Admin';
+                        } else if ($rows4['role'] == '2') {
+                          echo 'Student';
+                        }?></span></td>
                       </tr>
                       <?php
                                                      }
