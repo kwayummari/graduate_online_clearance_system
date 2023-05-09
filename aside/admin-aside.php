@@ -14,7 +14,7 @@
         </a>
         <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
         <li>
-            <a href="../users/">
+            <a href="user.php">
               <i class="bi bi-circle"></i><span>Users</span>
             </a>
           </li>
