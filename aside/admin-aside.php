@@ -18,36 +18,6 @@
               <i class="bi bi-circle"></i><span>Users</span>
             </a>
           </li>
-          <li>
-            <a href="../carousel/">
-              <i class="bi bi-circle"></i><span>Carousel</span>
-            </a>
-          </li>
-          <li>
-            <a href="../blog/">
-              <i class="bi bi-circle"></i><span>Blog</span>
-            </a>
-          </li>
-          <li>
-            <a href="../winners/">
-              <i class="bi bi-circle"></i><span>Winners</span>
-            </a>
-          </li>
-          <li>
-            <a href="../categories/">
-              <i class="bi bi-circle"></i><span>Categories</span>
-            </a>
-          </li>
-          <li>
-            <a href="../testimonial/">
-              <i class="bi bi-circle"></i><span>Testimonials</span>
-            </a>
-          </li>
-          <li>
-            <a href="../year/">
-              <i class="bi bi-circle"></i><span>Years</span>
-            </a>
-          </li>
         </ul>
       </li><!-- End Tables Nav -->
     </ul>
