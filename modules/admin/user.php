@@ -5,7 +5,6 @@ include '../../api/dashboard.php';
 <html lang="en">
 <?php include "../../head/head.php"; ?>
 <body>
-<!-- ======= Header ======= -->
   <?php include "../../header/header.php"; ?>
   <?php include "../../aside/index.php" ?>
   <main id="main" class="main">
