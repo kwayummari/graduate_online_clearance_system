@@ -135,7 +135,6 @@ include '../../connection/index.php';
                       <tr>
                         <th scope="col">Email</th>
                         <th scope="col">Full name</th>
-                        <th scope="col">Last Name</th>
                         <th scope="col">role</th>
                       </tr>
                     </thead>
@@ -147,7 +146,11 @@ include '../../connection/index.php';
                       <tr>
                         <td><?php echo $rows4['email'];?></td>
                         <td><?php echo $rows4['fullname'];?></td>
-                        <td><span class="badge bg-success"><?php echo $rows4['role'];?></span></td>
+                        <td><span class="badge bg-success"><?php if($rows4['role'] == '1') {
+                          echo 'Admin';
+                        } else if ($rows4['role'] == '2') {
+                          echo 'Student';
+                        }?></span></td>
                       </tr>
                       <?php
                                                      }
