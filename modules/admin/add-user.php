@@ -33,6 +33,17 @@ include '../../api/dashboard.php';
                     <option selected></option>
                       <option value='1'>Admin</option>
                       <option value='2'>Student</option>
+                      <option value='3'>Games Coach</option>
+                      <option value='4'>Hall Warden</option>
+                      <option value='5'>USAB</option>
+                      \<option value='6'>DARUSO</option>
+                      <option value='7'>LIBRARY</option>
+                      <option value='8'>DEAN OF STUDENTS/NHIF CARD</option>
+                      <option value='9'>COLLEGE PRINCIPLE/SCHOOL DEAN</option>
+                      <option value='10'>BURSAR</option>
+                      <option value='11'>SMART CARD(ID SUBMISSION)</option>
+                      <option value='12'>LOAN BOARD/STUDENT FINANCE UNIT(SFU)</option>
+
                     </select>
                   </div>
                 </div>
