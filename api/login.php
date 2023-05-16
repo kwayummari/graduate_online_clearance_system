@@ -2,9 +2,9 @@
 session_start();
  include 'connection/index.php';
 if (isset($_POST['submit'])) {
-  $email=$_POST['email'];
+  $id_number=$_POST['id_number'];
   $password=base64_encode($_POST['password']);
-  $query="select * from user where email='$email' and password='$password'";
+  $query="select * from user where id_number='$id_number' and password='$password'";
   $result=mysqli_query($connect,$query);
   $count=mysqli_fetch_assoc($result);
 
@@ -15,7 +15,7 @@ if (isset($_POST['submit'])) {
       header("location: modules/admin/");
   }
 } else {
-  echo 'Wrong email/ password';
+  echo 'Wrong Identification number or password';
 }
 }
  ?>

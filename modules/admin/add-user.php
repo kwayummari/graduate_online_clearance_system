@@ -43,7 +43,7 @@ include '../../api/dashboard.php';
                   </div>
                 </div>
                 <div class="row mb-3">
-                  <label for="inputText" class="col-sm-2 col-form-label">Registration Number/ Identification Number</label>
+                  <label for="inputText" class="col-sm-2 col-form-label">Identification Number</label>
                   <div class="col-sm-10">
                     <input type="text" class="form-control" name="id_number" required>
                   </div>

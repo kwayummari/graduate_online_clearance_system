@@ -36,11 +36,11 @@
                   <!--<form method="POST" class="row g-3 needs-validation" novalidate>-->
 
                     <div class="col-12">
-                      <label for="yourUsername" class="form-label">Email</label>
+                      <label for="yourUsername" class="form-label">Identification Number</label>
                       <div class="input-group has-validation">
-                        <span class="input-group-text" id="inputGroupPrepend">@</span>
-                        <input type="email" name="email" class="form-control" id="yourUsername" required>
-                        <div class="invalid-feedback">Please enter your valid email.</div>
+                        <span class="input-group-text" id="inputGroupPrepend">#</span>
+                        <input type="number" name="id_number" class="form-control" id="yourUsername" required>
+                        <div class="invalid-feedback">Please enter your valid id number.</div>
                       </div>
                     </div>
 
