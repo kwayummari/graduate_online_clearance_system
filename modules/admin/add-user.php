@@ -14,19 +14,7 @@ include '../../api/dashboard.php';
             <div class="card-body">
               <h5 class="card-title">User Input<span style="color: green; margin-left: 6cm;"><b><?php include('submit-user.php'); ?></b></span> </h5>
               <form method="POST">
-                <div class="row mb-3">
-                  <label for="inputText" class="col-sm-2 col-form-label">Full Name</label>
-                  <div class="col-sm-10">
-                    <input type="text" class="form-control" name="fname" required>
-                  </div>
-                </div>
-                <div class="row mb-3">
-                  <label for="inputText" class="col-sm-2 col-form-label">Email</label>
-                  <div class="col-sm-10">
-                    <input type="email" class="form-control" name="email" required>
-                  </div>
-                </div>
-                <div class="row mb-3">
+              <div class="row mb-3">
                   <label class="col-sm-2 col-form-label">Role</label>
                   <div class="col-sm-10">
                     <select class="form-select" aria-label="Default select example" name="role" required>
@@ -45,6 +33,24 @@ include '../../api/dashboard.php';
                       <option value='12'>LOAN BOARD/STUDENT FINANCE UNIT(SFU)</option>
 
                     </select>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label for="inputText" class="col-sm-2 col-form-label">Full Name</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" name="fname" required>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label for="inputText" class="col-sm-2 col-form-label">Registration Number/ Identification Number</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" name="id_number" required>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label for="inputText" class="col-sm-2 col-form-label">Email</label>
+                  <div class="col-sm-10">
+                    <input type="email" class="form-control" name="email" required>
                   </div>
                 </div>
                 <div class="row mb-3">
