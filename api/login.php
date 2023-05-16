@@ -13,7 +13,11 @@ if (isset($_POST['submit'])) {
     $_SESSION['role'] = $count['role'];
   if ($count['role'] == '1') {
       header("location: modules/admin/");
-  }
+  } else if ($count['role'] == '2') {
+    header("location: modules/students/");
+} else if ($count['role'] == '3') {
+    header("location: modules/convacation/");
+}
 } else {
   echo 'Wrong Identification number or password';
 }
