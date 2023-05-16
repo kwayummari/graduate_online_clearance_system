@@ -39,7 +39,7 @@
                       <label for="yourUsername" class="form-label">Identification Number</label>
                       <div class="input-group has-validation">
                         <span class="input-group-text" id="inputGroupPrepend">#</span>
-                        <input type="number" name="id_number" class="form-control" id="yourUsername" required>
+                        <input type="text" name="id_number" class="form-control" id="yourUsername" required>
                         <div class="invalid-feedback">Please enter your valid id number.</div>
                       </div>
                     </div>
