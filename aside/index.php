@@ -1,5 +1,5 @@
 <?php 
-if($status == '1'){
+if($role == '1'){
   include 'admin-aside.php';
 }
 ?>

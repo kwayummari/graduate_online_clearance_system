@@ -1,6 +1,6 @@
 <?php
 session_start();
- include 'connection/index.php';
+ include 'connection/login.php';
 if (isset($_POST['submit'])) {
   $id_number=$_POST['id_number'];
   $password=base64_encode($_POST['password']);

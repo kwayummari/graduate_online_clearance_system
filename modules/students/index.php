@@ -1,5 +1,5 @@
 <?php
-include '../../api/dashboard.php';
+include '../../api/students.php';
  ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -7,7 +7,6 @@ include '../../api/dashboard.php';
 <body>
 <!-- ======= Header ======= -->
   <?php include "../../header/header.php"; ?>
-  <?php include "../../aside/index.php" ?>
   <main id="main" class="main">
     <div class="pagetitle">
       <h1>Dashboard</h1>
@@ -24,6 +23,10 @@ include '../../api/dashboard.php';
         <!-- <div class="col-lg-8"> -->
           <div class="row">
             <!-- Sales Card -->
+            <?php   // LOOP TILL END OF DATA
+                      while($rows4=$result4->fetch_assoc())
+                      {
+                   ?>
             <div class="col-xxl-4 col-md-6">
               <div class="card info-card sales-card">
                 <div class="card-body">
@@ -33,7 +36,7 @@ include '../../api/dashboard.php';
                       <i class="bi bi-people"></i>
                     </div>
                     <div class="ps-3">
-                      <h6><?php echo $total_users ?></h6>
+                      <h6><?php echo $rows4['student_id'] ?></h6>
                       <!-- <span class="text-success small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">increase</span> -->
                     </div>
                   </div>
@@ -50,7 +53,7 @@ include '../../api/dashboard.php';
                       <i class="bi bi-house-fill"></i>
                     </div>
                     <div class="ps-3">
-                      <h6><?php echo $total_admin ?></h6>
+                      <h6><?php echo $rows4['stage'] ?></h6>
                       <!-- <span class="text-success small pt-1 fw-bold">8%</span> <span class="text-muted small pt-2 ps-1">increase</span> -->
                     </div>
                   </div>
@@ -67,52 +70,16 @@ include '../../api/dashboard.php';
                       <i class="bi bi-person-bounding-box"></i>
                     </div>
                     <div class="ps-3">
-                      <h6><?php echo $total_student ?></h6>
+                      <h6><?php echo $rows4['status'] ?></h6>
                       <!-- <span class="text-danger small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">decrease</span> -->
                     </div>
                   </div>
                 </div>
               </div>
             </div><!-- End Customers Card -->
-            <!-- Recent Sales -->
-            <div class="col-12">
-              <div class="card recent-sales overflow-auto">
-                <div class="card-body">
-                  <h5 class="card-title">System Users <span>| Today</span></h5>
-                  <table class="table table-borderless datatable">
-                    <thead>
-                      <tr>
-                        <th scope="col">Email</th>
-                        <th scope="col">Full name</th>
-                        <th scope="col">role</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                    <?php   // LOOP TILL END OF DATA
-                                                    while($rows4=$result4->fetch_assoc())
-                                                         {
-                                                       ?>
-                      <tr>
-                        <td><?php echo $rows4['email'];?></td>
-                        <td><?php echo $rows4['fullname'];?></td>
-                        <td><span class="badge bg-success"><?php if($rows4['role'] == '1') {
-                          echo 'Admin';
-                        } else if ($rows4['role'] == '2') {
-                          echo 'Student';
-                        } else if ($rows4['role'] == '3') {
-                          echo 'Convacation';
-                        }
-                        ?>
-                        </span></td>
-                      </tr>
-                      <?php
-                                                     }
-                                                     ?>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
+            <?php
+                    }
+                 ?>
           </div>
       </div>
     </section>
