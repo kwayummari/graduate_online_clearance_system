@@ -8,14 +8,15 @@
           echo 'ADMIN';
         } else if($role == '2') {
           echo 'Student';
-        }?></span>
+        } else if($role == '3') {
+          echo 'Convacation';
+        }
+        ?></span>
       </a>
       <?php if($role != '2') {
         echo '<i class="bi bi-list toggle-sidebar-btn" style="color: white"></i>';
       }  ?>
     </div><!-- End Logo -->
-
-
     <nav class="header-nav ms-auto">
       <ul class="d-flex align-items-center">
 
@@ -34,6 +35,8 @@
           echo 'ADMIN';
         } else if($role == '2') {
           echo 'Student';
+        } else if($role == '3') {
+          echo 'Convacation';
         }?></span>
             </li>
             <li>
@@ -48,18 +51,14 @@
             <li>
               <hr class="dropdown-divider">
             </li>
-
             <li>
               <a class="dropdown-item d-flex align-items-center" href="../../api/logout.php">
                 <i class="bi bi-box-arrow-right"></i>
                 <span>Sign Out</span>
               </a>
             </li>
-
           </ul><!-- End Profile Dropdown Items -->
         </li><!-- End Profile Nav -->
-
       </ul>
     </nav><!-- End Icons Navigation -->
-
   </header><!-- End Header -->

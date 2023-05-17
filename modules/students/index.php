@@ -18,11 +18,12 @@ include '../../api/students.php';
       </nav>
     </div><!-- End Page Title -->
     <section class="section dashboard">
-      <div class="row">
+      <?php if ($total_clearance != 0) {
+       ?>
+       <div class="row">
         <!-- Left side columns -->
         <!-- <div class="col-lg-8"> -->
           <div class="row">
-            <!-- Sales Card -->
             <?php   // LOOP TILL END OF DATA
                       while($rows4=$result4->fetch_assoc())
                       {
@@ -82,6 +83,28 @@ include '../../api/students.php';
                  ?>
           </div>
       </div>
+       <?php 
+      } else if($total_clearance == 0) { ?> 
+      <div class="row">
+      <div class="col-xxl-12 col-md-12">
+              <div class="card info-card sales-card">
+                <div class="card-body">
+                  <h5 class="card-title">Total <span>|System Users</span></h5>
+                  <div class="d-flex align-items-center">
+                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                      <i class="bi bi-people"></i>
+                    </div>
+                      <div class="ps-3">
+                        <h6>We apologize for the inconvenience, but the clearance process has not yet been initiated. To start the process, please press the button below. Thank you for your patience.
+Begin Clearance Process</h6>
+                      <a class="btn btn-primary w-100" style='background-color: #1e5288' href="../../api/start_clearance.php" name="submit" type="submit">Start Clearance</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End Sales Card -->
+      </div>
+      <?php } ?>
     </section>
   </main><!-- End #main -->
   <?php include "../../footer/index.php"; ?>
