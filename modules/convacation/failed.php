@@ -14,11 +14,17 @@ include '../../api/dashboard.php';
             <div class="card-body">
               <h5 class="card-title">Failed reason Input<span style="color: green; margin-left: 6cm;"><b><?php include('../../api/convacation_failed.php'); ?></b></span> </h5>
               <form method="POST">
-                <div class="row mb-3">
+              <div class="row mb-3">
                   <label for="inputText" class="col-sm-2 col-form-label">Remarks</label>
                   <div class="col-sm-10">
                     <input type="text" class="form-control" name="remarks" required>
                     <input type="hidden" value="<?php echo base64_decode($_GET['id'])?>" name="id">
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label class="col-sm-2 col-form-label">Submit Button</label>
+                  <div class="col-sm-10">
+                    <button type="submit" name="submit" class="btn btn-primary">Submit Form</button>
                   </div>
                 </div>
               </form><!-- End General Form Elements -->

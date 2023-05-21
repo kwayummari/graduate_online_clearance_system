@@ -1,5 +1,5 @@
 <?php
-include '../connection/index.php';
+include '../../connection/index.php';
 $id = $_POST['id'];
 $remarks = $_POST['remarks'];
 $query="update clearance set status = '2', remarks = '$remarks' where id = '$id'";
