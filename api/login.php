@@ -23,6 +23,8 @@ if (isset($_POST['submit'])) {
   header("location: modules/warden/");
 } else if ($count['role'] == '6') {
   header("location: modules/usab/");
+} else if ($count['role'] == '7') {
+  header("location: modules/daruso/");
 }
 } else {
   echo 'Wrong Identification number or password';
