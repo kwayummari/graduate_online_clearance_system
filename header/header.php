@@ -14,6 +14,8 @@
           echo 'College Principle';
         } else if($role == '5') {
           echo 'Hall Warden';
+        } else if($role == '6') {
+          echo 'Usab';
         }
         ?></span>
       </a>
@@ -45,7 +47,10 @@
           echo 'College Principle';
         } else if($role == '5') {
           echo 'Hall Warden';
-        }?></span>
+        } else if($role == '6') {
+          echo 'Usab';
+        }
+        ?></span>
             </li>
             <li>
               <hr class="dropdown-divider">
