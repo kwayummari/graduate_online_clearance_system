@@ -120,6 +120,8 @@ include '../../api/dashboard.php';
                           echo 'Bursar';
                         } else if($rows4['role'] == '12') {
                           echo 'Smart Card';
+                        } else if($rows4['role'] == '13') {
+                          echo 'Loan Board';
                         }
                         ?>
                         </span></td>
