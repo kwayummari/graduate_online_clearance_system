@@ -95,12 +95,15 @@ include '../../api/dashboard.php';
                       <tr>
                         <td><?php echo $rows4['email'];?></td>
                         <td><?php echo $rows4['fullname'];?></td>
-                        <td><span class="badge bg-success"><?php if($rows4['role'] == '1') {
+                        <td><span class="badge bg-success">
+                          <?php if($rows4['role'] == '1') {
                           echo 'Admin';
                         } else if ($rows4['role'] == '2') {
                           echo 'Student';
                         } else if ($rows4['role'] == '3') {
                           echo 'Convacation';
+                        } else if ($rows4['role'] == '4') {
+                          echo 'College Principle';
                         }
                         ?>
                         </span></td>

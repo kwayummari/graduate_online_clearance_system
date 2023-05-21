@@ -59,10 +59,13 @@ include '../../api/students.php';
                       <i class="bi bi-book"></i>
                     </div>
                     <div class="ps-3">
-                      <h6 style="color: red;">Your are waiting confirmation from <?php if($rows4['stage'] == 1) {
+                      <h6 style="color: red;">Your are waiting confirmation from 
+                      <?php if($rows4['stage'] == 1) {
                         echo 'Convacation';
                       } else if($rows4['stage'] == 2){
                         echo 'College Principle';
+                      } else if($rows4['stage'] == 3){
+                        echo 'Other stuff';
                       }  ?></h6>
                     </div>
                   </div>
