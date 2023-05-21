@@ -53,7 +53,7 @@ include '../../api/bursar.php';
                         $row = mysqli_fetch_assoc($username);
                         echo $row['id_number'];
                         ?></td>
-                        <td><a class="btn btn-success w-100" href="../../api/dean_success.php?id=<?php echo base64_encode($rows4['id']); ?>" name="submit" type="submit">Passed</a></td>
+                        <td><a class="btn btn-success w-100" href="../../api/bursar_success.php?id=<?php echo base64_encode($rows4['id']); ?>" name="submit" type="submit">Passed</a></td>
                         <td><a class="btn btn-danger w-100" href="failed.php?id=<?php echo base64_encode($rows4['id']); ?>" name="submit" type="submit">Failed</a></td>
                       </tr>
                       <?php
