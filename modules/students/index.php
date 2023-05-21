@@ -59,7 +59,9 @@ include '../../api/students.php';
                       <i class="bi bi-book"></i>
                     </div>
                     <div class="ps-3">
-                      <h6 style="color: red;"><?php echo $rows4['remarks'] ?></h6>
+                      <h6 style="color: red;">Your are waiting confirmation from <?php if($rows4['stage'] == 1) {
+                        echo 'Convacation';
+                      } ?></h6>
                     </div>
                   </div>
                 </div>
@@ -75,7 +77,13 @@ include '../../api/students.php';
                       <i class="bi bi-book"></i>
                     </div>
                     <div class="ps-3">
-                      <h6 style="color: red;"><?php echo $rows4['remarks'] ?></h6>
+                      <h6 style="color: green;">Your <?php if($rows4['stage'] == 1) {
+                        echo 'Convacation';
+                      } ?> has passed your clearance</h6>
+                      <span class="text-success small pt-1 fw-bold"><?php $stage = $rows4['stage'];
+                      $answer = ($stage / 13) * 100;
+                      echo $answer;
+                       ?>%</span> <span class="text-muted small pt-2 ps-1">increase</span>
                     </div>
                   </div>
                 </div>
