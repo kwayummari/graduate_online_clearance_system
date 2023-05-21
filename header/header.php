@@ -24,6 +24,8 @@
           echo 'Dean';
         } else if($role == '10') {
           echo 'Games Coach';
+        } else if($role == '11') {
+          echo 'Bursa';
         }
         ?></span>
       </a>
@@ -65,6 +67,8 @@
           echo 'Dean';
         } else if($role == '10') {
           echo 'Games Coach';
+        } else if($role == '11') {
+          echo 'Bursar';
         }
         ?></span>
             </li>
