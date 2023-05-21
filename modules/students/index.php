@@ -89,6 +89,9 @@ include '../../api/students.php';
                 </div>
               </div>
             </div><!-- End Sales Card -->
+            <td><a class="btn btn-success w-100" href="../../api/return.php" name="submit" type="submit">Submit to <?php if($rows4['stage'] == 1) {
+                        echo 'Games Coach';
+                      } ?></a></td>
               <?php
                     }
                  ?>
