@@ -75,7 +75,7 @@
           echo 'Bursar';
         } else if($role == '12') {
           echo 'Smart Card';
-        } else if($role == '12') {
+        } else if($role == '13') {
           echo 'Loan Board';
         }
         ?></span>
