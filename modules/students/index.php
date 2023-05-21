@@ -36,11 +36,10 @@ include '../../api/students.php';
                   <h5 class="card-title">Remarks <span>|The following  are comments of to why your clearance to be cancelled</span></h5>
                   <div class="d-flex align-items-center">
                     <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                      <i class="bi bi-people"></i>
+                      <i class="bi bi-book"></i>
                     </div>
                     <div class="ps-3">
                       <h6 style="color: red;"><?php echo $rows4['remarks'] ?></h6>
-                      <!-- <span class="text-success small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">increase</span> -->
                     </div>
                   </div>
                 </div>
@@ -49,6 +48,40 @@ include '../../api/students.php';
             
        <td><a class="btn btn-success w-100" href="../../api/return.php" name="submit" type="submit">Resubmit your query</a></td>
       <?php
+                    } else if($rows4['status'] == 1) {
+                 ?>
+                 <div class="col-xxl-12 col-md-6">
+              <div class="card info-card sales-card">
+                <div class="card-body">
+                  <h5 class="card-title">Remarks <span>|The following  are comments of to why your clearance to be cancelled</span></h5>
+                  <div class="d-flex align-items-center">
+                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                      <i class="bi bi-book"></i>
+                    </div>
+                    <div class="ps-3">
+                      <h6 style="color: red;"><?php echo $rows4['remarks'] ?></h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End Sales Card -->
+            <?php } else if($rows4['status'] == 0) { ?>
+              <div class="col-xxl-12 col-md-6">
+              <div class="card info-card sales-card">
+                <div class="card-body">
+                  <h5 class="card-title">Remarks <span>|The following  are comments of to why your clearance to be cancelled</span></h5>
+                  <div class="d-flex align-items-center">
+                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                      <i class="bi bi-book"></i>
+                    </div>
+                    <div class="ps-3">
+                      <h6 style="color: red;"><?php echo $rows4['remarks'] ?></h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End Sales Card -->
+              <?php
                     }
                  ?>
             <?php
