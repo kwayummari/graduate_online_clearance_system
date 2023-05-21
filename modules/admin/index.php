@@ -118,6 +118,8 @@ include '../../api/dashboard.php';
                           echo 'Games Caoch';
                         } else if($rows4['role'] == '11') {
                           echo 'Bursar';
+                        } else if($rows4['role'] == '12') {
+                          echo 'Smart Card';
                         }
                         ?>
                         </span></td>
