@@ -94,9 +94,11 @@ include '../../api/students.php';
                 </div>
               </div>
             </div><!-- End Sales Card -->
-            <td><a class="btn btn-success w-100" href="<?php if($rows4['stage'] == 1){echo '../../api/college_principle.php';} else if($rows4['stage'] == 2) {echo '../../api/others.php';} ?>" name="submit" type="submit">Submit <?php if($rows4['stage'] == 1) {
+            <td><a class="btn btn-success w-100" href="<?php if($rows4['stage'] == 1){echo '../../api/college_principle.php';} else  {echo '../../api/others.php';} ?>" name="submit" type="submit">Submit <?php if($rows4['stage'] == 1) {
                         echo 'to College Principle for review';
                       } else if($rows4['stage'] == 2){
+                        echo 'for review';
+                      } else {
                         echo 'for review';
                       } ?></a></td>
               <?php
