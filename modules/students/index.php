@@ -87,7 +87,7 @@ include '../../api/students.php';
                         echo 'Convacation';
                       } ?> has passed your clearance</h6>
                       <span class="text-success small pt-1 fw-bold"><?php $stage = $rows4['percent'];
-                      $answer = ($stage / 13) * 100;
+                      $answer = ($stage / 12) * 100;
                       echo $answer;
                        ?>%</span> <span class="text-muted small pt-2 ps-1">increase</span>
                     </div>
@@ -95,13 +95,17 @@ include '../../api/students.php';
                 </div>
               </div>
             </div><!-- End Sales Card -->
-            <td><a class="btn btn-success w-100" href="<?php if($rows4['stage'] == 1){echo '../../api/college_principle.php';} else  {echo '../../api/others.php';} ?>" name="submit" type="submit">Submit <?php if($rows4['stage'] == 1) {
+            <td>
+            <?php if($rows4['percent'] != 12) { ?>
+              <a class="btn btn-success w-100" href="<?php if($rows4['stage'] == 1){echo '../../api/college_principle.php';} else  {echo '../../api/others.php';} ?>" name="submit" type="submit">Submit <?php if($rows4['stage'] == 1) {
                         echo 'to College Principle for review';
                       } else if($rows4['stage'] == 2){
                         echo 'for review';
                       } else {
                         echo 'for review';
-                      } ?></a></td>
+                      } ?></a>
+                      <?php } ?>
+                      </td>
               <?php
                     }
                  ?>
