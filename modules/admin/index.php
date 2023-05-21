@@ -108,7 +108,7 @@ include '../../api/dashboard.php';
                           echo 'Hall Warden';
                         } else if ($rows4['role'] == '6') {
                           echo 'Usab';
-                        } else if($role == '7') {
+                        } else if($rows4['role'] == '7') {
                           echo 'Daruso';
                         }
                         ?>
