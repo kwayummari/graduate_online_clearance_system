@@ -1,5 +1,5 @@
 <?php
-include '../../api/bursar.php';
+include '../../api/card.php';
  ?>
 <!DOCTYPE html>
 <html lang="en">
