@@ -116,6 +116,8 @@ include '../../api/dashboard.php';
                           echo 'Dean';
                         } else if($rows4['role'] == '10') {
                           echo 'Games Caoch';
+                        } else if($rows4['role'] == '11') {
+                          echo 'Bursar';
                         }
                         ?>
                         </span></td>
