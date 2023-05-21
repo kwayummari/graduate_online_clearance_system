@@ -1,5 +1,5 @@
 <?php
-include '../../api/dashboard.php';
+include '../../api/convacation.php';
  ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -20,10 +20,7 @@ include '../../api/dashboard.php';
     </div><!-- End Page Title -->
     <section class="section dashboard">
       <div class="row">
-        <!-- Left side columns -->
-        <!-- <div class="col-lg-8"> -->
           <div class="row">
-            <!-- Recent Sales -->
             <div class="col-12">
               <div class="card recent-sales overflow-auto">
                 <div class="card-body">
@@ -31,9 +28,8 @@ include '../../api/dashboard.php';
                   <table class="table table-borderless datatable">
                     <thead>
                       <tr>
-                        <th scope="col">Email</th>
                         <th scope="col">Full name</th>
-                        <th scope="col">role</th>
+                        <th scope="col">Registration number</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -42,17 +38,23 @@ include '../../api/dashboard.php';
                                                          {
                                                        ?>
                       <tr>
-                        <td><?php echo $rows4['email'];?></td>
-                        <td><?php echo $rows4['fullname'];?></td>
-                        <td><span class="badge bg-success"><?php if($rows4['role'] == '1') {
-                          echo 'Admin';
-                        } else if ($rows4['role'] == '2') {
-                          echo 'Student';
-                        } else if ($rows4['role'] == '3') {
-                          echo 'Convacation';
-                        }
-                        ?>
-                        </span></td>
+                        <td><?php 
+                        $id = $rows4['student_id'];
+                        $query="select * from user where id = $id";
+                        $username=mysqli_query($connect,$query);
+                        $row = mysqli_fetch_assoc($username);
+                        echo $row['fullname'];
+                        ?></td>
+                        <td>
+                        <?php 
+                        $id = $rows4['student_id'];
+                        $query="select * from user where id = $id";
+                        $username=mysqli_query($connect,$query);
+                        $row = mysqli_fetch_assoc($username);
+                        echo $row['id_number'];
+                        ?></td>
+                        <td><a class="btn btn-success w-100" href="../../api/convacation_success.php" name="submit" type="submit">Passed</a></td>
+                        <td><a class="btn btn-danger w-100" href="failed.php?id=<?php echo $rows4['id']; ?>" name="submit" type="submit">Failed</a></td>
                       </tr>
                       <?php
                                                      }

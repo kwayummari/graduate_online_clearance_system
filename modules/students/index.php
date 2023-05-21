@@ -28,56 +28,29 @@ include '../../api/students.php';
                       while($rows4=$result4->fetch_assoc())
                       {
                    ?>
-            <div class="col-xxl-4 col-md-6">
+                   <?php 
+       if($rows4['status'] == 2) { ?> 
+            <div class="col-xxl-12 col-md-6">
               <div class="card info-card sales-card">
                 <div class="card-body">
-                  <h5 class="card-title">Total <span>|System Users</span></h5>
+                  <h5 class="card-title">Remarks <span>|The following  are comments of to why your clearance to be cancelled</span></h5>
                   <div class="d-flex align-items-center">
                     <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
                       <i class="bi bi-people"></i>
                     </div>
                     <div class="ps-3">
-                      <h6><?php echo $rows4['student_id'] ?></h6>
+                      <h6 style="color: red;"><?php echo $rows4['remarks'] ?></h6>
                       <!-- <span class="text-success small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">increase</span> -->
                     </div>
                   </div>
                 </div>
               </div>
             </div><!-- End Sales Card -->
-            <!-- Revenue Card -->
-            <div class="col-xxl-4 col-md-6">
-              <div class="card info-card revenue-card">
-                <div class="card-body">
-                  <h5 class="card-title">Total <span>| Admins</span></h5>
-                  <div class="d-flex align-items-center">
-                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                      <i class="bi bi-house-fill"></i>
-                    </div>
-                    <div class="ps-3">
-                      <h6><?php echo $rows4['stage'] ?></h6>
-                      <!-- <span class="text-success small pt-1 fw-bold">8%</span> <span class="text-muted small pt-2 ps-1">increase</span> -->
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div><!-- End Revenue Card -->
-            <!-- Customers Card -->
-            <div class="col-xxl-4 col-xl-12">
-              <div class="card info-card customers-card">
-                <div class="card-body">
-                  <h5 class="card-title">Total <span>| Students</span></h5>
-                  <div class="d-flex align-items-center">
-                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                      <i class="bi bi-person-bounding-box"></i>
-                    </div>
-                    <div class="ps-3">
-                      <h6><?php echo $rows4['status'] ?></h6>
-                      <!-- <span class="text-danger small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">decrease</span> -->
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div><!-- End Customers Card -->
+            
+       <td><a class="btn btn-success w-100" href="../../api/return.php" name="submit" type="submit">Resubmit your query</a></td>
+      <?php
+                    }
+                 ?>
             <?php
                     }
                  ?>
