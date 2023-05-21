@@ -6,7 +6,8 @@ include '../../api/students.php';
 <?php include "../../head/head.php"; ?>
 <body>
 <!-- ======= Header ======= -->
-  <?php include "../../header/header.php"; ?>
+<?php include "../../header/header.php"; ?>
+  <?php include "../../aside/index.php" ?>
   <main id="main" class="main">
     <div class="pagetitle">
       <h1>Dashboard</h1>
