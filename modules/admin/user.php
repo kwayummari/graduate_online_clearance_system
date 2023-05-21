@@ -63,6 +63,8 @@ include '../../api/dashboard.php';
                           echo 'Games Coach';
                         } else if($rows4['role'] == '11') {
                           echo 'Bursar';
+                        } else if($rows4['role'] == '12') {
+                          echo 'Smart Card';
                         }
                         ?></span></td>
                         <td><a href="update.php?id=<?php echo base64_encode($rows4['id']); ?>"><i class="bi bi-pen" style="color: green;"></i></a></td>
