@@ -54,7 +54,7 @@ include '../../api/convacation.php';
                         echo $row['id_number'];
                         ?></td>
                         <td><a class="btn btn-success w-100" href="../../api/convacation_success.php" name="submit" type="submit">Passed</a></td>
-                        <td><a class="btn btn-danger w-100" href="failed.php?id=<?php echo $rows4['id']; ?>" name="submit" type="submit">Failed</a></td>
+                        <td><a class="btn btn-danger w-100" href="failed.php?id=<?php echo base64_encode($rows4['id']); ?>" name="submit" type="submit">Failed</a></td>
                       </tr>
                       <?php
                                                      }
