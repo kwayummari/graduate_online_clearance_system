@@ -80,7 +80,7 @@ include '../../api/students.php';
                       <h6 style="color: green;">Your <?php if($rows4['stage'] == 1) {
                         echo 'Convacation';
                       } ?> has passed your clearance</h6>
-                      <span class="text-success small pt-1 fw-bold"><?php $stage = $rows4['stage'];
+                      <span class="text-success small pt-1 fw-bold"><?php $stage = $rows4['percent'];
                       $answer = ($stage / 13) * 100;
                       echo $answer;
                        ?>%</span> <span class="text-muted small pt-2 ps-1">increase</span>
@@ -90,7 +90,7 @@ include '../../api/students.php';
               </div>
             </div><!-- End Sales Card -->
             <td><a class="btn btn-success w-100" href="../../api/return.php" name="submit" type="submit">Submit to <?php if($rows4['stage'] == 1) {
-                        echo 'Games Coach';
+                        echo 'College Principle for review';
                       } ?></a></td>
               <?php
                     }
