@@ -55,6 +55,8 @@ include '../../api/dashboard.php';
                           echo 'Usab';
                         } else if($rows4['role'] == '7') {
                           echo 'Daruso';
+                        } else if($rows4['role'] == '8') {
+                          echo 'Librarian';
                         }
                         ?></span></td>
                         <td><a href="update.php?id=<?php echo base64_encode($rows4['id']); ?>"><i class="bi bi-pen" style="color: green;"></i></a></td>
