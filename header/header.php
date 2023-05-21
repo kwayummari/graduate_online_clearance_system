@@ -17,7 +17,7 @@
         } else if($role == '6') {
           echo 'Usab';
         } else if($role == '7') {
-          echo 'Darudo';
+          echo 'Daruso';
         }
         ?></span>
       </a>
