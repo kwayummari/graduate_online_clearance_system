@@ -16,6 +16,8 @@
           echo 'Hall Warden';
         } else if($role == '6') {
           echo 'Usab';
+        } else if($role == '7') {
+          echo 'Darudo';
         }
         ?></span>
       </a>
@@ -49,6 +51,8 @@
           echo 'Hall Warden';
         } else if($role == '6') {
           echo 'Usab';
+        } else if($role == '7') {
+          echo 'Darudo';
         }
         ?></span>
             </li>
