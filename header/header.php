@@ -20,6 +20,8 @@
           echo 'Daruso';
         } else if($role == '8') {
           echo 'Librarian';
+        } else if($role == '9') {
+          echo 'Dean';
         }
         ?></span>
       </a>
@@ -57,6 +59,8 @@
           echo 'Darudo';
         } else if($role == '8') {
           echo 'Librarian';
+        } else if($role == '9') {
+          echo 'Dean';
         }
         ?></span>
             </li>
