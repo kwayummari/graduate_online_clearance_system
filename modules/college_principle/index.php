@@ -1,5 +1,5 @@
 <?php
-include '../../api/convacation.php';
+include '../../api/principle.php';
  ?>
 <!DOCTYPE html>
 <html lang="en">

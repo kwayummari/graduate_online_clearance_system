@@ -61,7 +61,9 @@ include '../../api/students.php';
                     <div class="ps-3">
                       <h6 style="color: red;">Your are waiting confirmation from <?php if($rows4['stage'] == 1) {
                         echo 'Convacation';
-                      } ?></h6>
+                      } else if($rows4['stage'] == 2){
+                        echo 'College Principle';
+                      }  ?></h6>
                     </div>
                   </div>
                 </div>
@@ -89,7 +91,7 @@ include '../../api/students.php';
                 </div>
               </div>
             </div><!-- End Sales Card -->
-            <td><a class="btn btn-success w-100" href="../../api/return.php" name="submit" type="submit">Submit to <?php if($rows4['stage'] == 1) {
+            <td><a class="btn btn-success w-100" href="../../api/college_principle.php" name="submit" type="submit">Submit to <?php if($rows4['stage'] == 1) {
                         echo 'College Principle for review';
                       } ?></a></td>
               <?php
