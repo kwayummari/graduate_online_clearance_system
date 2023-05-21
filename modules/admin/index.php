@@ -107,7 +107,7 @@ include '../../api/dashboard.php';
                         } else if ($rows4['role'] == '5') {
                           echo 'Hall Warden';
                         } else if ($rows4['role'] == '6') {
-                          echo 'College Principle';
+                          echo 'Usab';
                         }
                         ?>
                         </span></td>
