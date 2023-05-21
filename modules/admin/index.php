@@ -104,6 +104,10 @@ include '../../api/dashboard.php';
                           echo 'Convacation';
                         } else if ($rows4['role'] == '4') {
                           echo 'College Principle';
+                        } else if ($rows4['role'] == '5') {
+                          echo 'Hall Warden';
+                        } else if ($rows4['role'] == '6') {
+                          echo 'College Principle';
                         }
                         ?>
                         </span></td>
