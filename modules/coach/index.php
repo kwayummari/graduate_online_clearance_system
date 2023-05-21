@@ -1,5 +1,5 @@
 <?php
-include '../../api/dean.php';
+include '../../api/coach.php';
  ?>
 <!DOCTYPE html>
 <html lang="en">
