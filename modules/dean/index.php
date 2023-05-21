@@ -1,5 +1,5 @@
 <?php
-include '../../api/library.php';
+include '../../api/dean.php';
  ?>
 <!DOCTYPE html>
 <html lang="en">
