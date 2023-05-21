@@ -1,7 +1,7 @@
 <?php
 include '../connection/index.php';
 $id = base64_decode($_GET['id']);
-$query = "SELECT percent FROM clearance WHERE id = 1";
+$query = "SELECT percent FROM clearance WHERE id = '$id'";
 $result = mysqli_query($connect, $query);
 $row = mysqli_fetch_assoc($result);
 $currentValue = $row['percent'];
