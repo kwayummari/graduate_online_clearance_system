@@ -26,6 +26,8 @@
           echo 'Games Coach';
         } else if($role == '11') {
           echo 'Bursa';
+        } else if($role == '12') {
+          echo 'Smart Card';
         }
         ?></span>
       </a>
@@ -69,6 +71,8 @@
           echo 'Games Coach';
         } else if($role == '11') {
           echo 'Bursar';
+        } else if($role == '12') {
+          echo 'Smart Card';
         }
         ?></span>
             </li>
