@@ -22,13 +22,13 @@ include '../../api/dashboard.php';
                       <option value='1'>Admin</option>
                       <option value='2'>Student</option>
                       <option value='3'>Convacation</option>
-                      <option value='4'>Games Coach</option>
+                      <option value='4'>COLLEGE PRINCIPLE/SCHOOL DEAN</option>
                       <option value='5'>Hall Warden</option>
                       <option value='6'>USAB</option>
                       \<option value='7'>DARUSO</option>
                       <option value='8'>LIBRARY</option>
                       <option value='9'>DEAN OF STUDENTS/NHIF CARD</option>
-                      <option value='10'>COLLEGE PRINCIPLE/SCHOOL DEAN</option>
+                      <option value='10'>Games Coach</option>
                       <option value='11'>BURSAR</option>
                       <option value='12'>SMART CARD(ID SUBMISSION)</option>
                       <option value='13'>LOAN BOARD/STUDENT FINANCE UNIT(SFU)</option>
