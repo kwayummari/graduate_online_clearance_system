@@ -19,6 +19,8 @@ if (isset($_POST['submit'])) {
     header("location: modules/convacation/");
 } else if ($count['role'] == '4') {
   header("location: modules/college_principle/");
+} else if ($count['role'] == '5') {
+  header("location: modules/warden/");
 }
 } else {
   echo 'Wrong Identification number or password';
