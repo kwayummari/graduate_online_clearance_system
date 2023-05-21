@@ -10,6 +10,10 @@
           echo 'Student';
         } else if($role == '3') {
           echo 'Convacation';
+        } else if($role == '4') {
+          echo 'College Principle';
+        } else if($role == '5') {
+          echo 'Hall Warden';
         }
         ?></span>
       </a>
