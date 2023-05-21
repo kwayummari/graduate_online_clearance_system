@@ -7,8 +7,8 @@ if($role == '1'){
 else if($role == '3'){
   include 'convacation-aside.php';
 } else if($role == '4') {
-  echo 'convacation-aside.php';
+  include 'convacation-aside.php';
 } else if($role == '5') {
-  echo 'convacation-aside.php';
+  include 'convacation-aside.php';
 }
 ?>
