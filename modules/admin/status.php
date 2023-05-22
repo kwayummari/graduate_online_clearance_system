@@ -41,33 +41,9 @@ include '../../api/status.php';
                         <th scope="row"><a href="#"><?php echo $rows4['id'];?></a></th>
                         <td><?php echo $rows4['email'];?></td>
                         <td><a href="#" class="text-primary"><?php echo $rows4['fullname'];?></a></td>
-                        <td><span class="badge bg-success"><?php if($rows4['role'] == '1') {
-                          echo 'Admin';
-                        } else if ($rows4['role'] == '2') {
+                        <td><span class="badge bg-success"><?php  if ($rows4['role'] == '2') {
                           echo 'Student';
-                        } else if ($rows4['role'] == '3') {
-                          echo 'Convacation';
-                        } else if ($rows4['role'] == '4') {
-                          echo 'College Principle';
-                        } else if ($rows4['role'] == '5') {
-                          echo 'Hall Warden';
-                        } else if ($rows4['role'] == '6') {
-                          echo 'Usab';
-                        } else if($rows4['role'] == '7') {
-                          echo 'Daruso';
-                        } else if($rows4['role'] == '8') {
-                          echo 'Librarian';
-                        } else if($rows4['role'] == '9') {
-                          echo 'Dean';
-                        }  else if($rows4['role'] == '10') {
-                          echo 'Games Coach';
-                        } else if($rows4['role'] == '11') {
-                          echo 'Bursar';
-                        } else if($rows4['role'] == '12') {
-                          echo 'Smart Card';
-                        } else if($rows4['role'] == '13') {
-                          echo 'Loan Board';
-                        }
+                        } 
                         ?></span></td>
                         <td><a href="update.php?id=<?php echo base64_encode($rows4['id']); ?>"><i class="bi bi-pen" style="color: green;"></i></a></td>
                         <td><a href="delete.php?id=<?php echo base64_encode($rows4['id']); ?>"><i class="bi bi-archive-fill" style="color: red;"></i></a></td>
