@@ -49,10 +49,16 @@ include '../../api/status.php';
                         <td><span class="badge bg-success">
                           <?php  
                         $id = $rows4['id'];
-                        
+                        $query = "SELECT percent FROM clearance WHERE Student_id = '$id'";
+$result = mysqli_query($connect, $query);
+$row = mysqli_fetch_assoc($result);
+$currentValue = $row['percent'];
+if($currentValue == 12) {
+  echo 'Finished Clearance';
+} else {
+  'Pending';
+}
                         ?></span></td>
-                        <td><a href="update.php?id=<?php echo base64_encode($rows4['id']); ?>"><i class="bi bi-pen" style="color: green;"></i></a></td>
-                        <td><a href="delete.php?id=<?php echo base64_encode($rows4['id']); ?>"><i class="bi bi-archive-fill" style="color: red;"></i></a></td>
                       </tr>
                       <?php
                                                      }
