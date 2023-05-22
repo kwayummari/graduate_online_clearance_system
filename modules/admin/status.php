@@ -46,9 +46,10 @@ include '../../api/status.php';
                           echo 'Student';
                         } 
                         ?></span></td>
-                        <td><span class="badge bg-success"><?php  if ($rows4['role'] == '2') {
-                          echo 'Student';
-                        } 
+                        <td><span class="badge bg-success">
+                          <?php  
+                        $id = $rows4['id'];
+                        
                         ?></span></td>
                         <td><a href="update.php?id=<?php echo base64_encode($rows4['id']); ?>"><i class="bi bi-pen" style="color: green;"></i></a></td>
                         <td><a href="delete.php?id=<?php echo base64_encode($rows4['id']); ?>"><i class="bi bi-archive-fill" style="color: red;"></i></a></td>
