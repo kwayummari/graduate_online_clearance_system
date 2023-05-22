@@ -5,83 +5,28 @@ include '../../api/dashboard.php';
 <html lang="en">
 <?php include "../../head/head.php"; ?>
 <body>
-<!-- ======= Header ======= -->
   <?php include "../../header/header.php"; ?>
   <?php include "../../aside/index.php" ?>
   <main id="main" class="main">
     <div class="pagetitle">
-      <h1>Dashboard</h1>
+      <h1>Users</h1>
       <nav>
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="../home.php">Home</a></li>
-          <li class="breadcrumb-item active">Dashboard</li>
+          <li class="breadcrumb-item active">Users</li>
         </ol>
       </nav>
     </div><!-- End Page Title -->
     <section class="section dashboard">
       <div class="row">
-        <!-- Left side columns -->
-        <!-- <div class="col-lg-8"> -->
-          <div class="row">
-            <!-- Sales Card -->
-            <div class="col-xxl-4 col-md-6">
-              <div class="card info-card sales-card">
-                <div class="card-body">
-                  <h5 class="card-title">Total <span>|System Users</span></h5>
-                  <div class="d-flex align-items-center">
-                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                      <i class="bi bi-people"></i>
-                    </div>
-                    <div class="ps-3">
-                      <h6><?php echo $total_users ?></h6>
-                      <!-- <span class="text-success small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">increase</span> -->
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div><!-- End Sales Card -->
-            <!-- Revenue Card -->
-            <div class="col-xxl-4 col-md-6">
-              <div class="card info-card revenue-card">
-                <div class="card-body">
-                  <h5 class="card-title">Total <span>| Admins</span></h5>
-                  <div class="d-flex align-items-center">
-                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                      <i class="bi bi-house-fill"></i>
-                    </div>
-                    <div class="ps-3">
-                      <h6><?php echo $total_admin ?></h6>
-                      <!-- <span class="text-success small pt-1 fw-bold">8%</span> <span class="text-muted small pt-2 ps-1">increase</span> -->
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div><!-- End Revenue Card -->
-            <!-- Customers Card -->
-            <div class="col-xxl-4 col-xl-12">
-              <div class="card info-card customers-card">
-                <div class="card-body">
-                  <h5 class="card-title">Total <span>| Students</span></h5>
-                  <div class="d-flex align-items-center">
-                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                      <i class="bi bi-person-bounding-box"></i>
-                    </div>
-                    <div class="ps-3">
-                      <h6><?php echo $total_student ?></h6>
-                      <!-- <span class="text-danger small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">decrease</span> -->
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div><!-- End Customers Card -->
-            <!-- Recent Sales -->
             <div class="col-12">
               <div class="card recent-sales overflow-auto">
                 <div class="card-body">
-                  <h5 class="card-title">System Users <span>| Today</span></h5>
+                  <h5 class="card-title">System Users <span>| Today</span> <a href="add-user.php"><span class="badge bg-success text-white">+ Add User</span></a></h5>
                   <table class="table table-borderless datatable">
                     <thead>
                       <tr>
+                        <th scope="col">#</th>
                         <th scope="col">Email</th>
                         <th scope="col">Full name</th>
                         <th scope="col">role</th>
@@ -93,10 +38,10 @@ include '../../api/dashboard.php';
                                                          {
                                                        ?>
                       <tr>
+                        <th scope="row"><a href="#"><?php echo $rows4['id'];?></a></th>
                         <td><?php echo $rows4['email'];?></td>
-                        <td><?php echo $rows4['fullname'];?></td>
-                        <td><span class="badge bg-success">
-                          <?php if($rows4['role'] == '1') {
+                        <td><a href="#" class="text-primary"><?php echo $rows4['fullname'];?></a></td>
+                        <td><span class="badge bg-success"><?php if($rows4['role'] == '1') {
                           echo 'Admin';
                         } else if ($rows4['role'] == '2') {
                           echo 'Student';
@@ -114,8 +59,8 @@ include '../../api/dashboard.php';
                           echo 'Librarian';
                         } else if($rows4['role'] == '9') {
                           echo 'Dean';
-                        } else if($rows4['role'] == '10') {
-                          echo 'Games Caoch';
+                        }  else if($rows4['role'] == '10') {
+                          echo 'Games Coach';
                         } else if($rows4['role'] == '11') {
                           echo 'Bursar';
                         } else if($rows4['role'] == '12') {
@@ -123,8 +68,9 @@ include '../../api/dashboard.php';
                         } else if($rows4['role'] == '13') {
                           echo 'Loan Board';
                         }
-                        ?>
-                        </span></td>
+                        ?></span></td>
+                        <td><a href="update.php?id=<?php echo base64_encode($rows4['id']); ?>"><i class="bi bi-pen" style="color: green;"></i></a></td>
+                        <td><a href="delete.php?id=<?php echo base64_encode($rows4['id']); ?>"><i class="bi bi-archive-fill" style="color: red;"></i></a></td>
                       </tr>
                       <?php
                                                      }
@@ -135,6 +81,8 @@ include '../../api/dashboard.php';
               </div>
             </div>
           </div>
+        <div class="col-lg-4">
+        </div><!-- End Right side columns -->
       </div>
     </section>
   </main><!-- End #main -->
