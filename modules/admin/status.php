@@ -1,5 +1,5 @@
 <?php
-include '../../api/dashboard.php';
+include '../../api/status.php';
  ?>
 <!DOCTYPE html>
 <html lang="en">
