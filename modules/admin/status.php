@@ -30,6 +30,7 @@ include '../../api/status.php';
                         <th scope="col">Email</th>
                         <th scope="col">Full name</th>
                         <th scope="col">role</th>
+                        <th scope="col">status</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -41,6 +42,10 @@ include '../../api/status.php';
                         <th scope="row"><a href="#"><?php echo $rows4['id'];?></a></th>
                         <td><?php echo $rows4['email'];?></td>
                         <td><a href="#" class="text-primary"><?php echo $rows4['fullname'];?></a></td>
+                        <td><span class="badge bg-success"><?php  if ($rows4['role'] == '2') {
+                          echo 'Student';
+                        } 
+                        ?></span></td>
                         <td><span class="badge bg-success"><?php  if ($rows4['role'] == '2') {
                           echo 'Student';
                         } 
