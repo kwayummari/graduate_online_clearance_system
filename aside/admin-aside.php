@@ -18,6 +18,10 @@
               <i class="bi bi-circle"></i><span>Users</span>
             </a>
           </li>
+          <a href="status.php">
+              <i class="bi bi-circle"></i><span>Student status</span>
+            </a>
+          </li>
         </ul>
       </li><!-- End Tables Nav -->
     </ul>
