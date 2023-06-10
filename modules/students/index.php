@@ -140,6 +140,73 @@ Begin Clearance Process</h6>
       </div>
       <?php } ?>
     </section>
+    <section class="section dashboard">
+    <div class="row">
+          <div class="row">
+            <div class="col-12">
+              <div class="card recent-sales overflow-auto">
+                <div class="card-body">
+                  <h5 class="card-title">System Users <span>| Today</span></h5>
+                  <table class="table table-borderless datatable">
+                    <thead>
+                      <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">STATUS</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Convacation</td>
+                        <td><a class="btn btn-success w-50" href="" name="submit" type="submit">Passed</a></td>
+                      </tr>
+                      <tr>
+                        <td>Games Coach</td>
+                        <td><a class="btn btn-success w-50" href="" name="submit" type="submit">Passed</a></td>
+                      </tr>
+                      <tr>
+                        <td>Hall Warden</td>
+                        <td><a class="btn btn-success w-50" href="" name="submit" type="submit">Passed</a></td>
+                      </tr>
+                      <tr>
+                        <td>Usab</td>
+                        <td><a class="btn btn-success w-50" href="" name="submit" type="submit">Passed</a></td>
+                      </tr>
+                      <tr>
+                        <td>Daruso</td>
+                        <td><a class="btn btn-success w-50" href="" name="submit" type="submit">Passed</a></td>
+                      </tr>
+                      <tr>
+                        <td>Library</td>
+                        <td><a class="btn btn-success w-50" href="" name="submit" type="submit">Passed</a></td>
+                      </tr>
+                      <tr>
+                        <td>Dean of Students/NHIF CARD</td>
+                        <td><a class="btn btn-success w-50" href="" name="submit" type="submit">Passed</a></td>
+                      </tr>
+                      <tr>
+                        <td>College Principal/SCHOOL DEAN</td>
+                        <td><a class="btn btn-success w-50" href="" name="submit" type="submit">Passed</a></td>
+                      </tr>
+                      <tr>
+                        <td>BURSAR</td>
+                        <td><a class="btn btn-success w-50" href="" name="submit" type="submit">Passed</a></td>
+                      </tr>
+                      <tr>
+                        <td>Smart Card(ID SUBMISSION)</td>
+                        <td><a class="btn btn-success w-50" href="" name="submit" type="submit">Passed</a></td>
+                      </tr>
+                      <tr>
+                        <td>Loan Board/STUDENT FINANCE UNIT(SFU)</td>
+                        <td><a class="btn btn-success w-50" href="" name="submit" type="submit">Passed</a></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </section>
   </main><!-- End #main -->
   <?php include "../../footer/index.php"; ?>
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
