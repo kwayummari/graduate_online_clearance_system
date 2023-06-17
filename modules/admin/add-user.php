@@ -37,6 +37,12 @@ include '../../api/dashboard.php';
                   </div>
                 </div>
                 <div class="row mb-3">
+                  <label for="inputText" class="col-sm-2 col-form-label">Programme Degeree</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" name="program" required>
+                  </div>
+                </div>
+                <div class="row mb-3">
                   <label for="inputText" class="col-sm-2 col-form-label">Full Name</label>
                   <div class="col-sm-10">
                     <input type="text" class="form-control" name="fname" required>
