@@ -162,7 +162,7 @@ Begin Clearance Process</h6>
                         $fetchConvacation=mysqli_query($connect,$querys);
                         $row = mysqli_fetch_assoc($fetchConvacation);
                         $convacation = $row['convacation'];
-                        if($convacation != null) {
+                        if($convacation != null  && $convacation != 0) {
                         ?>
                         <td><a class="btn btn-success w-50" href="" name="submit" type="submit">Passed</a></td>
                         <?php } else { ?>
@@ -171,43 +171,143 @@ Begin Clearance Process</h6>
                       </tr>
                       <tr>
                         <td>Games Coach</td>
+                        <?php 
+                        $querys="select coach from clearance where student_id = $user_id";
+                        $fetchConvacation=mysqli_query($connect,$querys);
+                        $row = mysqli_fetch_assoc($fetchConvacation);
+                        $convacation = $row['coach'];
+                        if($convacation != null && $convacation != 0) {
+                        ?>
                         <td><a class="btn btn-success w-50" href="" name="submit" type="submit">Passed</a></td>
+                        <?php } else { ?>
+                          <td><a class="btn btn-danger w-50" href="" name="submit" type="submit">Pending</a></td>
+                          <?php } ?>
                       </tr>
                       <tr>
                         <td>Hall Warden</td>
+                        <?php 
+                        $querys="select warden from clearance where student_id = $user_id";
+                        $fetchConvacation=mysqli_query($connect,$querys);
+                        $row = mysqli_fetch_assoc($fetchConvacation);
+                        $convacation = $row['warden'];
+                        if($convacation != null  && $convacation != 0) {
+                        ?>
                         <td><a class="btn btn-success w-50" href="" name="submit" type="submit">Passed</a></td>
+                        <?php } else { ?>
+                          <td><a class="btn btn-danger w-50" href="" name="submit" type="submit">Pending</a></td>
+                          <?php } ?>
                       </tr>
                       <tr>
                         <td>Usab</td>
+                        <?php 
+                        $querys="select usab from clearance where student_id = $user_id";
+                        $fetchConvacation=mysqli_query($connect,$querys);
+                        $row = mysqli_fetch_assoc($fetchConvacation);
+                        $convacation = $row['usab'];
+                        if($convacation != null  && $convacation != 0) {
+                        ?>
                         <td><a class="btn btn-success w-50" href="" name="submit" type="submit">Passed</a></td>
+                        <?php } else { ?>
+                          <td><a class="btn btn-danger w-50" href="" name="submit" type="submit">Pending</a></td>
+                          <?php } ?>
                       </tr>
                       <tr>
                         <td>Daruso</td>
+                        <?php 
+                        $querys="select daruso from clearance where student_id = $user_id";
+                        $fetchConvacation=mysqli_query($connect,$querys);
+                        $row = mysqli_fetch_assoc($fetchConvacation);
+                        $convacation = $row['daruso'];
+                        if($convacation != null  && $convacation != 0) {
+                        ?>
                         <td><a class="btn btn-success w-50" href="" name="submit" type="submit">Passed</a></td>
+                        <?php } else { ?>
+                          <td><a class="btn btn-danger w-50" href="" name="submit" type="submit">Pending</a></td>
+                          <?php } ?>
                       </tr>
                       <tr>
                         <td>Library</td>
+                        <?php 
+                        $querys="select library from clearance where student_id = $user_id";
+                        $fetchConvacation=mysqli_query($connect,$querys);
+                        $row = mysqli_fetch_assoc($fetchConvacation);
+                        $convacation = $row['library'];
+                        if($convacation != null  && $convacation != 0) {
+                        ?>
                         <td><a class="btn btn-success w-50" href="" name="submit" type="submit">Passed</a></td>
+                        <?php } else { ?>
+                          <td><a class="btn btn-danger w-50" href="" name="submit" type="submit">Pending</a></td>
+                          <?php } ?>
                       </tr>
                       <tr>
                         <td>Dean of Students/NHIF CARD</td>
+                        <?php 
+                        $querys="select dean from clearance where student_id = $user_id";
+                        $fetchConvacation=mysqli_query($connect,$querys);
+                        $row = mysqli_fetch_assoc($fetchConvacation);
+                        $convacation = $row['dean'];
+                        if($convacation != null && $convacation != 0) {
+                        ?>
                         <td><a class="btn btn-success w-50" href="" name="submit" type="submit">Passed</a></td>
+                        <?php } else { ?>
+                          <td><a class="btn btn-danger w-50" href="" name="submit" type="submit">Pending</a></td>
+                          <?php } ?>
                       </tr>
                       <tr>
                         <td>College Principal/SCHOOL DEAN</td>
+                        <?php 
+                        $querys="select principal from clearance where student_id = $user_id";
+                        $fetchConvacation=mysqli_query($connect,$querys);
+                        $row = mysqli_fetch_assoc($fetchConvacation);
+                        $convacation = $row['principal'];
+                        if($convacation != null && $convacation != 0) {
+                        ?>
                         <td><a class="btn btn-success w-50" href="" name="submit" type="submit">Passed</a></td>
+                        <?php } else { ?>
+                          <td><a class="btn btn-danger w-50" href="" name="submit" type="submit">Pending</a></td>
+                          <?php } ?>
                       </tr>
                       <tr>
                         <td>BURSAR</td>
+                        <?php 
+                        $querys="select bursar from clearance where student_id = $user_id";
+                        $fetchConvacation=mysqli_query($connect,$querys);
+                        $row = mysqli_fetch_assoc($fetchConvacation);
+                        $convacation = $row['bursar'];
+                        if($convacation != null && $convacation != 0) {
+                        ?>
                         <td><a class="btn btn-success w-50" href="" name="submit" type="submit">Passed</a></td>
+                        <?php } else { ?>
+                          <td><a class="btn btn-danger w-50" href="" name="submit" type="submit">Pending</a></td>
+                          <?php } ?>
                       </tr>
                       <tr>
                         <td>Smart Card(ID SUBMISSION)</td>
+                        <?php 
+                        $querys="select card from clearance where student_id = $user_id";
+                        $fetchConvacation=mysqli_query($connect,$querys);
+                        $row = mysqli_fetch_assoc($fetchConvacation);
+                        $convacation = $row['card'];
+                        if($convacation != null && $convacation != 0) {
+                        ?>
                         <td><a class="btn btn-success w-50" href="" name="submit" type="submit">Passed</a></td>
+                        <?php } else { ?>
+                          <td><a class="btn btn-danger w-50" href="" name="submit" type="submit">Pending</a></td>
+                          <?php } ?>
                       </tr>
                       <tr>
                         <td>Loan Board/STUDENT FINANCE UNIT(SFU)</td>
+                        <?php 
+                        $querys="select loan from clearance where student_id = $user_id";
+                        $fetchConvacation=mysqli_query($connect,$querys);
+                        $row = mysqli_fetch_assoc($fetchConvacation);
+                        $convacation = $row['loan'];
+                        if($convacation != null && $convacation != 0) {
+                        ?>
                         <td><a class="btn btn-success w-50" href="" name="submit" type="submit">Passed</a></td>
+                        <?php } else { ?>
+                          <td><a class="btn btn-danger w-50" href="" name="submit" type="submit">Pending</a></td>
+                          <?php } ?>
                       </tr>
                     </tbody>
                   </table>
