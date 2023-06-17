@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: May 22, 2023 at 12:25 PM
+-- Generation Time: Jun 17, 2023 at 11:06 PM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.1.6
 
@@ -31,26 +31,29 @@ CREATE TABLE `clearance` (
   `id` int(255) NOT NULL,
   `student_id` text NOT NULL,
   `stage` text NOT NULL,
-  `percent` text NOT NULL,
+  `percent` text DEFAULT NULL,
   `remarks` text DEFAULT NULL,
   `status` text NOT NULL,
-  `warden` text NOT NULL,
-  `usab` text NOT NULL,
-  `daruso` text NOT NULL,
-  `library` text NOT NULL,
-  `dean` text NOT NULL,
-  `coach` text NOT NULL,
-  `bursar` text NOT NULL,
-  `card` text NOT NULL,
-  `loan` text NOT NULL
+  `convacation` text DEFAULT NULL,
+  `warden` text DEFAULT NULL,
+  `usab` text DEFAULT NULL,
+  `daruso` text DEFAULT NULL,
+  `library` text DEFAULT NULL,
+  `dean` text DEFAULT NULL,
+  `coach` text DEFAULT NULL,
+  `bursar` text DEFAULT NULL,
+  `card` text DEFAULT NULL,
+  `loan` text DEFAULT NULL,
+  `principal` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `clearance`
 --
 
-INSERT INTO `clearance` (`id`, `student_id`, `stage`, `percent`, `remarks`, `status`, `warden`, `usab`, `daruso`, `library`, `dean`, `coach`, `bursar`, `card`, `loan`) VALUES
-(8, '2', '3', '12', '-', '0', '1', '1', '1', '1', '1', '1', '1', '1', '1');
+INSERT INTO `clearance` (`id`, `student_id`, `stage`, `percent`, `remarks`, `status`, `convacation`, `warden`, `usab`, `daruso`, `library`, `dean`, `coach`, `bursar`, `card`, `loan`, `principal`) VALUES
+(8, '2', '3', '12', '-', '0', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', ''),
+(9, '15', '3', '3', '-', '0', '1', '0', '0', '0', '0', '0', '0', '1', '0', '0', '1');
 
 -- --------------------------------------------------------
 
@@ -85,7 +88,8 @@ INSERT INTO `user` (`id`, `email`, `fullname`, `id_number`, `role`, `status`, `p
 (11, 'lambileki@gocs.go.tz', 'Allen Lambileki', '1010-1010-1010', '10', '1', 'TGFtYmlsZWtpQDIwMjM='),
 (12, 'hamisi@gocs.go.tz', 'Onesmo Hamisi', '1111-1111-1111', '11', '1', 'SGFtaXNpQDIwMjM='),
 (13, 'muya@gocs.go.tz', 'Karim Muya', '1212-1212-1212', '12', '1', 'TXV5YUAyMDIz'),
-(14, 'mushi@gocs.go.tz', 'Brian Mushi', '1313-1313-1313', '13', '1', 'TXVzaGlAMjAyMw==');
+(14, 'mushi@gocs.go.tz', 'Brian Mushi', '1313-1313-1313', '13', '1', 'TXVzaGlAMjAyMw=='),
+(15, 'brian@gmail.com', 'Brian Mushi', '2020-04-07431', '2', '1', 'R3VkYm95MjRA');
 
 --
 -- Indexes for dumped tables
@@ -111,13 +115,13 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `clearance`
 --
 ALTER TABLE `clearance`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
