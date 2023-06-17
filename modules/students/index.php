@@ -136,7 +136,7 @@ Begin Clearance Process</h6>
                   </div>
                 </div>
               </div>
-            </div><!-- End Sales Card -->
+            </div>
       </div>
       <?php } ?>
     </section>
@@ -157,7 +157,17 @@ Begin Clearance Process</h6>
                     <tbody>
                       <tr>
                         <td>Convacation</td>
+                        <?php 
+                        $querys="select convacation from clearance where student_id = $user_id";
+                        $fetchConvacation=mysqli_query($connect,$querys);
+                        $row = mysqli_fetch_assoc($fetchConvacation);
+                        $convacation = $row['convacation'];
+                        if($convacation != null) {
+                        ?>
                         <td><a class="btn btn-success w-50" href="" name="submit" type="submit">Passed</a></td>
+                        <?php } else { ?>
+                          <td><a class="btn btn-danger w-50" href="" name="submit" type="submit">Pending</a></td>
+                          <?php } ?>
                       </tr>
                       <tr>
                         <td>Games Coach</td>
@@ -207,7 +217,7 @@ Begin Clearance Process</h6>
           </div>
       </div>
     </section>
-  </main><!-- End #main -->
+  </main>
   <?php include "../../footer/index.php"; ?>
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
   <?php include "../../js/index.php"; ?>
