@@ -170,6 +170,20 @@ Begin Clearance Process</h6>
                           <?php } ?>
                       </tr>
                       <tr>
+                        <td>College Principal/SCHOOL DEAN</td>
+                        <?php 
+                        $querys="select principal from clearance where student_id = $user_id";
+                        $fetchConvacation=mysqli_query($connect,$querys);
+                        $row = mysqli_fetch_assoc($fetchConvacation);
+                        $convacation = $row['principal'];
+                        if($convacation != null && $convacation != 0) {
+                        ?>
+                        <td><a class="btn btn-success w-50" href="" name="submit" type="submit">Passed</a></td>
+                        <?php } else { ?>
+                          <td><a class="btn btn-danger w-50" href="" name="submit" type="submit">Pending</a></td>
+                          <?php } ?>
+                      </tr>
+                      <tr>
                         <td>Games Coach</td>
                         <?php 
                         $querys="select coach from clearance where student_id = $user_id";
@@ -246,20 +260,6 @@ Begin Clearance Process</h6>
                         $fetchConvacation=mysqli_query($connect,$querys);
                         $row = mysqli_fetch_assoc($fetchConvacation);
                         $convacation = $row['dean'];
-                        if($convacation != null && $convacation != 0) {
-                        ?>
-                        <td><a class="btn btn-success w-50" href="" name="submit" type="submit">Passed</a></td>
-                        <?php } else { ?>
-                          <td><a class="btn btn-danger w-50" href="" name="submit" type="submit">Pending</a></td>
-                          <?php } ?>
-                      </tr>
-                      <tr>
-                        <td>College Principal/SCHOOL DEAN</td>
-                        <?php 
-                        $querys="select principal from clearance where student_id = $user_id";
-                        $fetchConvacation=mysqli_query($connect,$querys);
-                        $row = mysqli_fetch_assoc($fetchConvacation);
-                        $convacation = $row['principal'];
                         if($convacation != null && $convacation != 0) {
                         ?>
                         <td><a class="btn btn-success w-50" href="" name="submit" type="submit">Passed</a></td>
