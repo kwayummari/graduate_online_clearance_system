@@ -7,11 +7,11 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="cv/images/logo/icon.png" rel="apple-touch-icon" sizes="144x144">
-  <link href="cv/images/logo/icon.png" rel="apple-touch-icon" sizes="114x114">
-  <link href="cv/images/logo/icon.png" rel="apple-touch-icon" sizes="72x72">
-  <link href="cv/images/logo/icon.png" rel="apple-touch-icon">
-  <link href="cv/images/logo/icon.png" rel="shortcut icon">
+  <link href="cv/logo.png" rel="apple-touch-icon" sizes="144x144">
+  <link href="cv/logo.png" rel="apple-touch-icon" sizes="114x114">
+  <link href="cv/logo.png" rel="apple-touch-icon" sizes="72x72">
+  <link href="cv/logo.png" rel="apple-touch-icon">
+  <link href="cv/logo.png" rel="shortcut icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.gstatic.com" rel="preconnect">
