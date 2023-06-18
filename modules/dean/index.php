@@ -30,6 +30,7 @@ include '../../api/dean.php';
                       <tr>
                         <th scope="col">Full name</th>
                         <th scope="col">Registration number</th>
+                        <th scope="col">Programme Degree</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -52,6 +53,14 @@ include '../../api/dean.php';
                         $username=mysqli_query($connect,$query);
                         $row = mysqli_fetch_assoc($username);
                         echo $row['id_number'];
+                        ?></td>
+                        <td>
+                        <?php 
+                        $id = $rows4['student_id'];
+                        $query="select * from user where id = $id";
+                        $username=mysqli_query($connect,$query);
+                        $row = mysqli_fetch_assoc($username);
+                        echo $row['program'];
                         ?></td>
                         <td><a class="btn btn-success w-100" href="../../api/dean_success.php?id=<?php echo base64_encode($rows4['id']); ?>" name="submit" type="submit">Passed</a></td>
                         <td><a class="btn btn-danger w-100" href="failed.php?id=<?php echo base64_encode($rows4['id']); ?>" name="submit" type="submit">Failed</a></td>
