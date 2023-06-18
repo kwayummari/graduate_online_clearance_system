@@ -29,6 +29,7 @@ include '../../api/dashboard.php';
                         <th scope="col">#</th>
                         <th scope="col">Email</th>
                         <th scope="col">Full name</th>
+                        <th scope="col">Programme Degeree</th>
                         <th scope="col">role</th>
                       </tr>
                     </thead>
@@ -41,6 +42,7 @@ include '../../api/dashboard.php';
                         <th scope="row"><a href="#"><?php echo $rows4['id'];?></a></th>
                         <td><?php echo $rows4['email'];?></td>
                         <td><a href="#" class="text-primary"><?php echo $rows4['fullname'];?></a></td>
+                        <td><a href="#" class="text-primary"><?php echo $rows4['program'];?></a></td>
                         <td><span class="badge bg-success"><?php if($rows4['role'] == '1') {
                           echo 'Admin';
                         } else if ($rows4['role'] == '2') {
