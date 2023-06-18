@@ -14,8 +14,8 @@
             <div class="col-lg-4 col-md-6 d-flex flex-column align-items-center justify-content-center">
 
               <div class="d-flex justify-content-center py-4">
+              <img src="cv/logo.png" style="width: 70px; height: 70px" alt=""> 
                 <a href="index.php" class="logo d-flex align-items-center w-auto">
-                  <!-- <img src="cv/images/logo/icon.png" alt="">  -->
                   <span class="d-none d-lg-block align-text-center" style="color: white">GOCS PANEL</span>
                 </a>
               </div><!-- End Logo -->
@@ -28,7 +28,6 @@
                     <h5 class="card-title text-center pb-0 fs-4">Login to Your Account</h5>
                     <p class="text-center small">Enter your username & password to login</p>
                   </div>
-                  
                   <h5 class="card-title"><span style="color: red;"><b><?php include('api/login.php'); ?></b></span> </h5>
 
               <!-- General Form Elements -->
