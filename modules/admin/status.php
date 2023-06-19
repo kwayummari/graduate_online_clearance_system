@@ -56,7 +56,7 @@ $currentValue = $row['percent'];
 if($currentValue == 12) {
   echo 'Finished Clearance';
 } else {
-  'Pending';
+  echo 'Pending';
 }
                         ?></span></td>
                       </tr>
