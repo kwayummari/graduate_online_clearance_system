@@ -151,7 +151,7 @@ Begin Clearance Process</h6>
                     <thead>
                       <tr>
                         <th scope="col">Name</th>
-                        <th scope="col">STATUS</th>
+                        <th scope="col">Remarks</th>
                       </tr>
                     </thead>
                     <tbody>
