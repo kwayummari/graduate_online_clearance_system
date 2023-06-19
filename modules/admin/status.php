@@ -42,11 +42,23 @@ include '../../api/status.php';
                         <th scope="row"><a href="#"><?php echo $rows4['id'];?></a></th>
                         <td><?php echo $rows4['email'];?></td>
                         <td><a href="#" class="text-primary"><?php echo $rows4['fullname'];?></a></td>
-                        <td><span class="badge bg-success"><?php  if ($rows4['role'] == '2') {
+                        <td>
+                          <span class="badge bg-success"><?php  if ($rows4['role'] == '2') {
                           echo 'Student';
                         } 
                         ?></span></td>
-                        <td><span class="badge bg-success">
+                        <td><span class="<?php  
+                        $id = $rows4['id'];
+                        $query = "SELECT percent FROM clearance WHERE Student_id = '$id'";
+$result = mysqli_query($connect, $query);
+$row = mysqli_fetch_assoc($result);
+$currentValue = $row['percent'];
+if($currentValue == 12) {
+  echo 'badge bg-success';
+} else {
+  echo 'badge bg-danger';
+}
+   ?>">
                           <?php  
                         $id = $rows4['id'];
                         $query = "SELECT percent FROM clearance WHERE Student_id = '$id'";
@@ -58,7 +70,8 @@ if($currentValue == 12) {
 } else {
   echo 'Pending';
 }
-                        ?></span></td>
+   ?>
+   </span></td>
                       </tr>
                       <?php
                                                      }
