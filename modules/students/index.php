@@ -66,7 +66,7 @@ include '../../api/students.php';
                       } else if($rows4['stage'] == 2){
                         echo 'College Principle';
                       } else if($rows4['stage'] == 3){
-                        echo 'Other stuff';
+                        echo 'Other staff';
                       }  ?></h6>
                     </div>
                   </div>
