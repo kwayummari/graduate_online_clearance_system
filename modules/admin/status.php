@@ -28,8 +28,8 @@ include '../../api/status.php';
                       <tr>
                         <th scope="col">Email</th>
                         <th scope="col">Full name</th>
+                        <th scope="col">Registration number</th>
                         <th scope="col">Program degree</th>
-                        <th scope="col">role</th>
                         <th scope="col">status</th>
                       </tr>
                     </thead>
@@ -41,12 +41,8 @@ include '../../api/status.php';
                       <tr>
                         <td><?php echo $rows4['email'];?></td>
                         <td><?php echo $rows4['fullname'];?></td>
+                        <td><?php echo $rows4['id_number'];?></td>
                         <td><?php echo $rows4['program'];?></td>
-                        <td>
-                          <span class="badge bg-success"><?php  if ($rows4['role'] == '2') {
-                          echo 'Student';
-                        } 
-                        ?></span></td>
                         <td><span class="<?php  
                         $id = $rows4['id'];
                         $query = "SELECT percent FROM clearance WHERE Student_id = '$id'";
