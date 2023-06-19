@@ -26,9 +26,9 @@ include '../../api/status.php';
                   <table class="table table-borderless datatable">
                     <thead>
                       <tr>
-                        <th scope="col">#</th>
                         <th scope="col">Email</th>
                         <th scope="col">Full name</th>
+                        <th scope="col">Program degree</th>
                         <th scope="col">role</th>
                         <th scope="col">status</th>
                       </tr>
@@ -39,9 +39,9 @@ include '../../api/status.php';
                                                          {
                                                        ?>
                       <tr>
-                        <th scope="row"><a href="#"><?php echo $rows4['id'];?></a></th>
                         <td><?php echo $rows4['email'];?></td>
-                        <td><a href="#" class="text-primary"><?php echo $rows4['fullname'];?></a></td>
+                        <td><?php echo $rows4['fullname'];?></td>
+                        <td><?php echo $rows4['program'];?></td>
                         <td>
                           <span class="badge bg-success"><?php  if ($rows4['role'] == '2') {
                           echo 'Student';
