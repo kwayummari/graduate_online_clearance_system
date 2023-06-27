@@ -31,6 +31,7 @@ include '../../api/convacation.php';
                         <th scope="col">Full name</th>
                         <th scope="col">Registration number</th>
                         <th scope="col">Programme Degree</th>
+                        <th scope="col">Date</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -61,6 +62,10 @@ include '../../api/convacation.php';
                         $username=mysqli_query($connect,$query);
                         $row = mysqli_fetch_assoc($username);
                         echo $row['program'];
+                        ?></td>
+                        <td>
+                        <?php 
+                        echo $rows4['date'];
                         ?></td>
                         <td><a class="btn btn-success w-100" href="../../api/convacation_success.php?id=<?php echo base64_encode($rows4['id']); ?>" name="submit" type="submit">Passed</a></td>
                         <td><a class="btn btn-danger w-100" href="failed.php?id=<?php echo base64_encode($rows4['id']); ?>" name="submit" type="submit">Failed</a></td>
