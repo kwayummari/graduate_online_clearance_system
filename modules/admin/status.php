@@ -19,7 +19,7 @@ include '../../api/status.php';
     </div><!-- End Page Title -->
     <section class="section dashboard">
       <div class="row">
-            <div class="col-12">
+            <div class="col-11">
               <div class="card recent-sales overflow-auto">
                 <div class="card-body">
                   <h5 class="card-title">System Users <span>| Today</span> <a href="add-user.php"><span class="badge bg-success text-white">+ Add User</span></a></h5>
@@ -49,7 +49,7 @@ include '../../api/status.php';
 $result = mysqli_query($connect, $query);
 $row = mysqli_fetch_assoc($result);
 $currentValue = $row['percent'];
-if($currentValue == 12) {
+if($currentValue == 11) {
   echo 'badge bg-success';
 } else {
   echo 'badge bg-danger';
@@ -61,7 +61,7 @@ if($currentValue == 12) {
 $result = mysqli_query($connect, $query);
 $row = mysqli_fetch_assoc($result);
 $currentValue = $row['percent'];
-if($currentValue == 12) {
+if($currentValue == 11) {
   echo 'Finished Clearance';
 } else {
   echo 'Pending';
