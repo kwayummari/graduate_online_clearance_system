@@ -31,7 +31,7 @@ include '../../api/students.php';
                    ?>
                    <?php 
        if($rows4['status'] == 2) { ?> 
-            <div class="col-xxl-12 col-md-6">
+            <div class="col-xxl-11 col-md-6">
               <div class="card info-card sales-card">
                 <div class="card-body">
                   <h5 class="card-title">Remarks <span>|The following  are comments of to why your clearance to be cancelled</span></h5>
@@ -51,7 +51,7 @@ include '../../api/students.php';
       <?php
                     } else if($rows4['status'] == 1) {
                  ?>
-                 <div class="col-xxl-12 col-md-6">
+                 <div class="col-xxl-11 col-md-6">
               <div class="card info-card sales-card">
                 <div class="card-body">
                   <h5 class="card-title">Remarks <span>|The following  are comments of to why your clearance to be cancelled</span></h5>
@@ -74,32 +74,41 @@ include '../../api/students.php';
               </div>
             </div><!-- End Sales Card -->
             <?php } else if($rows4['status'] == 0) { ?>
-              <div class="col-xxl-12 col-md-6">
+              <div class="col-xxl-11 col-md-6">
               <div class="card info-card sales-card">
                 <div class="card-body">
-                  <h5 class="card-title">Remarks <span>|<?php if($rows4['percent'] != 12) { ?>
-                       The following  are comments of to why your clearance to be cancelled <?php } else { ?>
+                  <h5 class="card-title">Remarks <span>|<?php if($rows4['percent'] != 11) { ?>
+                       The following  are comments of to why your clearance to be cancelled <?php } else if($rows4['percent'] == 11) { ?>
                         Thank you for finishing your clearance process
                         <?php } ?></span></h5>
                   <div class="d-flex align-items-center">
                     <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
                       <i class="bi bi-book"></i>
                     </div>
+                    <?php if($rows4['percent'] != 11) { ?>
                     <div class="ps-3">
                       <h6 style="color: green;">Your <?php if($rows4['stage'] == 1) {
                         echo 'Convacation';
                       } ?> has passed your clearance</h6>
                       <span class="text-success small pt-1 fw-bold"><?php $stage = $rows4['percent'];
-                      $answer = ($stage / 12) * 100;
+                      $answer = ($stage / 11) * 100;
                       echo $answer;
                        ?>%</span> <span class="text-muted small pt-2 ps-1">increase</span>
                     </div>
+                    <?php } else if($rows4['percent'] == 11) { ?>
+                      <div class="ps-3">
+                      <h6 style="color: green;">Thank you for finishing your clearance process</h6>
+                      <span class="text-success small pt-1 fw-bold"><?php $stage = $rows4['percent'];
+                      $answer = ($stage / 11) * 100;
+                      echo $answer;
+                       ?>%</span> <span class="text-muted small pt-2 ps-1">increase</span>
+                    </div> <?php }?>
                   </div>
                 </div>
               </div>
             </div><!-- End Sales Card -->
             <td>
-            <?php if($rows4['percent'] != 12) { ?>
+            <?php if($rows4['percent'] != 11) { ?>
               <a class="btn btn-success w-100" href="<?php if($rows4['stage'] == 1){echo '../../api/college_principle.php';} else  {echo '../../api/others.php';} ?>" name="submit" type="submit">Submit <?php if($rows4['stage'] == 1) {
                         echo 'to College Principle for review';
                       } else if($rows4['stage'] == 2){
@@ -107,7 +116,7 @@ include '../../api/students.php';
                       } else {
                         echo 'for review';
                       } ?></a>
-                      <?php } ?>
+                      <?php }?>
                       </td>
               <?php
                     }
@@ -120,7 +129,7 @@ include '../../api/students.php';
        <?php 
       } else if($total_clearance == 0) { ?> 
       <div class="row">
-      <div class="col-xxl-12 col-md-12">
+      <div class="col-xxl-11 col-md-11">
               <div class="card info-card sales-card">
                 <div class="card-body">
                   <h5 class="card-title">Total <span>|System Users</span></h5>
@@ -143,7 +152,7 @@ Begin Clearance Process</h6>
     <section class="section dashboard">
     <div class="row">
           <div class="row">
-            <div class="col-12">
+            <div class="col-11">
               <div class="card recent-sales overflow-auto">
                 <div class="card-body">
                   <h5 class="card-title">System Users <span>| Today</span></h5>
