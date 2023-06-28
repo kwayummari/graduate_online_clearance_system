@@ -1,5 +1,6 @@
 <?php
 error_reporting(E_ALL & ~E_WARNING);
+include '../../connection/index.php';
   $query="select * from user where role = '1'";
   $result=mysqli_query($connect,$query);
   $count=mysqli_fetch_assoc($result);

@@ -1,5 +1,4 @@
 <?php
- include '../../connection/index.php';
 if (isset($_POST['submit'])) {
   $fname=$_POST['fname'];
   $email=$_POST['email'];
